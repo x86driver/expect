@@ -1,0 +1,22 @@
+#!/usr/bin/expect
+
+proc send_down {} {
+        send "\033\[B"
+}
+
+spawn pico a.txt
+expect "GNU nano*"
+#send "Hello"
+#set i 0
+#for {set i 0} {$i < 15} {incr i} {
+#    send "\033\[B"
+#	send_down
+#}
+
+#send "\037"
+#send "16\r"
+#send "\033\[3~"
+
+#send ctrl-x
+send "\030"
+
